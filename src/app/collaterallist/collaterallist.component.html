@@ -1,0 +1,46 @@
+<div class="side-panel pd-1">
+  <div class="total-collaters-count">{{collateralData?.totalCollateralsCount}}</div>
+  <span class="total-txt">Total Uploaded <br>Collaterals</span>
+  <div class="line-bar-container" *ngIf="displayLineChart && data && options">
+    <p-chart type="horizontalBar" width="100%" height="20" [data]="data" [options]="options" [responsive]="true">
+    </p-chart>
+  </div>
+  <div class="count-container">
+    <div *ngFor="let colItem of collateralData?.collateralCounts;index as i;" class="coll-count-box">
+      <hr [style.backgroundColor]="colItem?.backgroundColor" align="left">
+      <div class="coll-count">{{colItem?.count}}</div>
+      <div class="coll-name">{{colItem?.label}}</div>
+    </div>
+  </div>
+
+</div>
+<div class="right-panel">
+  <input *ngIf="showSearchBar" [(ngModel)]="tagSearch" (change)="onTagSearch($event)" 
+    class="search-box" type="text" placeholder="Search by Tag/Cloud / Big Data / Migration etc." />
+  <div *ngIf="!showSearchBar" class="row pd-lr-1">
+    <div class="col-md-10 pd-0">
+      <img class="back-to-pro" (click)="onProposalGoback($event)" width="25" height="25" src="./../../assets/images/back-to-proposal.svg" alt="">
+      <span class="pro-label">Proposal Name</span>
+      <div class="pro-title">{{proposalName}}</div>
+    </div>
+    <div class="col-md-2 pd-0">
+      <button class="btn btn-primary reset-btn" (click)="onReset($event)">Reset</button>
+    </div>
+  </div>
+  <div class="scroll-container">
+
+    <div class="card-container clearfix">
+      <app-collateral-card *ngFor="let card of displayCollateralList;index as i;" [cardIndex]="i" [card]="card"
+        (delete)="onDelete($event)" (edit)="onEdit($event)" (view)="onView($event)" (download)="onDownload($event)"></app-collateral-card>
+    </div>
+    <p-paginator *ngIf="totalRecords > displayRecordSize" #paginator [rows]="displayRecordSize"
+      [totalRecords]="totalRecords" (onPageChange)="paginate($event)"></p-paginator>
+  </div>
+
+</div>
+<p-confirmDialog #cd [style]="{width: '30vw'}" styleClass="delete-popup">
+  <p-footer>
+    <button type="button" class="delete-btn" pButton icon="pi pi-times" label="No" (click)="cd.reject()"></button>
+    <button type="button" class="delete-btn" pButton icon="pi pi-check" label="Yes" (click)="cd.accept()"></button>
+  </p-footer>
+</p-confirmDialog>

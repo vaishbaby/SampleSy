@@ -1,0 +1,89 @@
+<div class="side-panel pd-10">
+  <h6 class="title"># SMEs / Architects</h6>
+  <div class="doughnut-container">
+    <p-chart type="doughnut" width="100%" height="22vh" [data]="data" [options]="options" [responsive]="true"></p-chart>
+    <div class="doughnut-info">
+      <div class="d-inf-cnt">
+        <img class="sme-d-ic" src="../../assets/images/sme-icon.svg" alt="">
+        <div class="sme-arch">Total SMEs/Architects</div>
+        <div class="sme-count">{{smeArchData?.totalSmeArchitects|number: '2.'}}</div>
+      </div>
+    </div>
+  </div>
+  <div class="locaion-c">
+    <div *ngFor="let location of locations; index as i;" class="loc-count-box" [ngClass]="{'last-two': locations.length%2==0 && ((i==(locations.length-1))||(i==(locations.length-2))),
+        'last-one': locations.length%2!=0 && (i==(locations.length-1))}">
+
+      <hr [style.backgroundColor]="location?.color" align="left">
+      <div class="loc-count">
+        {{location.data}}
+      </div>
+      <div class="loc-lebal">{{location.name}}</div>
+    </div>
+  </div>
+
+  <div class="sme-stats">
+    <div class="total-count">
+      <div class="total-count-name">Total Domains</div>
+      <div class="sme-count">{{smeArchData?.totalDomains}}</div>
+    </div>
+    <div class="total-count">
+      <div class="total-count-name">Total Sub-Domains</div>
+      <div class="sme-count">{{smeArchData?.totalSubDomains}}</div>
+    </div>
+  </div>
+</div>
+<div class="right-panel">
+  <div class="sme-txt">
+    <input [(ngModel)]="keyword" class="search-box" type="text"
+      placeholder="Search by Tag/Cloud / Big Data / Migration etc." (keyup.enter)="searchDomain($event)" />
+  </div>
+  <div class="sme-tb">
+    <p-table [value]="smeList" [lazy]="true" [scrollable]="true" scrollHeight="70vh"
+      (onLazyLoad)="loadSmeListLazy($event)" [paginator]="isPaginator" [rows]="displayRows"
+      [totalRecords]="totalRecords">
+      <ng-template pTemplate="header">
+        <tr>
+          <th>Domain </th>
+          <th>Sub Domain</th>
+          <th>SMEs/Architects</th>
+          <th>Location</th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-sme>
+        <tr>
+          <td style="font-weight: 600;">{{sme.domain}}</td>
+          <td>{{sme.subDomain}}</td>
+          <td> <a class="sme-name" href="#" *ngFor="let smeInfo of sme?.listOfSMEUIModel; last as isLast"
+              (click)="onSmeNameClickHandler($event,smeInfo, sme.region, op)">{{smeInfo?.name}}{{!isLast?", ":""}}</a>
+          </td>
+          <td>{{sme.location}}</td>
+        </tr>
+      </ng-template>
+    </p-table>
+  </div>
+</div>
+
+<p-overlayPanel #op>
+  <div *ngIf="selectedUser">
+    <div class="userShortName">
+      {{getSMEShortName()}}
+    </div>
+    <div>
+      <span *ngIf="selectedUser" class="fs-14">{{selectedUser.name}} </span>
+    </div>
+    <div>
+      <span class="fs-12">{{selectedUser.designation}} </span>
+    </div>
+    <div class="pt-1">
+      <i class="fa fa-phone icon-color"></i> : <span class="fs-10"> {{selectedUser.contactInfo}} </span>
+    </div>
+    <div>
+      <i class="fa fa-envelope icon-color"></i> : <span class="fs-10"> {{selectedUser.email}} </span>
+    </div>
+    <div>
+      <i class="fa fa-map-marker icon-color"></i> : <span class="fs-10"> {{selectedUser.smeLocation}} </span>
+    </div>
+  </div>
+
+</p-overlayPanel>

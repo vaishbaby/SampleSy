@@ -1,0 +1,110 @@
+.tag-list > li {
+       border-radius: 1.2rem;
+       margin: .5rem;
+       padding: .3rem .7rem;
+       font-size: 1.2rem;
+       font-weight: 300;
+       color: #464953;
+       font-family: 'Carnas-Light';
+       max-width: --webkit-fill-available;
+   }
+.add-new-tag{
+    font-family: 'Carnas-Medium';
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: #464953;
+}
+.tx-box{
+    width: 100%;
+    margin-top: 0.8rem;
+    font-size: 1rem;
+    font-weight: 300;
+    color: #a4a4a4 !important;
+    font-family: 'Carnas-Light';
+    border-radius: .3rem;
+    border: solid .1rem #d7d7d7;
+    background-color: #ffffff;
+}
+.save-btn{
+    border-radius: .3rem;
+    background-color: #4a90e2;
+    font-family: 'Carnas-Medium';
+    text-align: center;
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+.tags{
+    margin-top: 3.2rem;
+    font-family: 'Carnas-Medium';
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: #464953;
+}
+.tag-c{
+    margin-top: 2.4rem;
+}
+.doc-header{
+    width: 100%;
+    height: 5.6rem;
+    padding: 1.6rem 3.2rem;
+    box-shadow: 0 .2rem .4rem 0 rgba(0, 0, 0, 0.3);
+    background-color: #323639;
+}
+.doc-icon{
+    margin: 0 1.6rem;
+    float: right;
+    color: white;
+}
+.doc-panel{
+    // background-color: white;
+    background-color: rgb(82, 86, 89);
+    // margin: 1.2rem 2rem;
+    // padding: 2rem;
+    height: calc(100%) !important;
+}
+
+.doc-container {
+    height: 100%;
+    margin: 0 5.6rem;
+    padding-bottom: 1.6rem;
+}
+.tag-panel{
+    width: 28.8rem;
+    background-color:#ebebeb !important;
+    height: 100%;
+    float: right;
+    padding: 1.6rem;
+}
+.add-tag-btn{
+    float:left;
+}
+.document-panel{
+    height: 100%;
+    float: left;
+    width: calc(100% - 28.8rem);
+    background-color: rgb(82, 86, 89);
+}
+.del-tag{
+    padding: 0.56rem;
+    cursor: pointer;
+    font-weight: bolder;
+    visibility: hidden;
+}
+
+.tag-item:hover{
+    background-color: #fff !important;
+    box-shadow: 0 0 .4rem 0 rgba(0, 0, 0, 0.5);
+    border: solid 1px #18191b;
+}
+
+.tag-item:hover .del-tag{
+    visibility: visible;
+}
+
+.tag-err{
+    color: red;
+    font-size: 1rem;
+    font-family: 'Carnas-Light';
+    padding: 0.4rem;
+}

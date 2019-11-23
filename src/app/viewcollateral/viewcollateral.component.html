@@ -1,0 +1,58 @@
+<p-dialog styleClass="view-collateral" [visible]="true" [modal]="true" [resizable]="false" [closable]="false"
+  [draggable]="false" (onHide)="goBack()" appendTo="body">
+  <p-header>
+    <span class="">Return to Collateral Listings</span>
+    <a role="button" tabindex="0" (click)="goBack()" class="close-btn pull-right">
+      <span class="doc-icon"><i class="fa fa-times" style="font-size:20px;"></i></span>
+    </a>
+
+
+  </p-header>
+  <div class="doc-container">
+    <div class="document-panel">
+      <!-- <div class="doc-header">
+        <span class="doc-icon"><i class="fa fa-print" style="font-size:20px;"></i></span>
+        <a role="button" (click)="downloadCollateral()">
+          <span class="doc-icon"><i class="fa fa-download" style="font-size:20px;"></i></span>
+        </a>
+
+        <span class="doc-icon"><i class="fas fa-sync" style="font-size:20px;"></i></span>
+      </div> -->
+      <!-- <div class="doc-panel" [innerHTML]="htmlCode">
+          </div> -->
+      <div class="doc-panel">
+        <!-- <embed [src]="htmlCode | safe" width="100%" height="100%"  frameborder="0"/> -->
+
+        <!-- <iframe name="title" (load)="onPdfLoad($event)" id="iFrameRef"
+        [src]="htmlCode | safe" width="100%" height="100%" frameborder="0"></iframe> -->
+
+        <app-custom-pdf-viewer [src]="htmlCode" [blobdata]="blobData" [filename]="fileName" (after-load-complete)="onAfterLoadComplete($event)"></app-custom-pdf-viewer>
+      </div>
+
+    </div>
+    <div class="tag-panel">
+      <div>
+        <div class="form-group">
+          <span class="add-new-tag">Add New Tag</span>
+          <input [(ngModel)]="newTag" #newAnnotation (keyup.enter)="addAnnotation(newAnnotation.value)"
+            (blur)="addAnnotation(newAnnotation.value)" 
+            (change)="showTagError = false"
+            class="form-control tx-box"
+            placeholder="Type your tag here….">
+            <span *ngIf="showTagError" class="pull-right tag-err">Tag already Exist in the list</span>
+        </div>
+        <button [disabled]="entitlement.isEntitled()" type="button" class="btn btn-primary save-btn" (click)="saveTags()">SAVE</button>
+      </div>
+      <div class="tag-c">
+        <span class="tags">TAGS</span>
+        <ul class="tag-list list-inline" style="list-style-type:none;">
+          <li *ngFor="let tag of tags" [ngStyle]="{'background-color': tag.tagColor}" [title]="tag.tagName" class="tag-item list-inline-item text-truncate">
+            {{tag.tagName}}
+            <a class="del-tag" (click)="onDeleteTag(tag)">X</a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </div>
+</p-dialog>

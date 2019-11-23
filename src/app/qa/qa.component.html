@@ -1,0 +1,122 @@
+<div class="d-inline-flex w-100  h-100" *ngIf="!isMobile">
+  <section class="w-25 border-lighter bg-white">
+    <div class="input-group p-3 border-lighter-bottom" style="height: 6.4rem;">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon1">
+          <i class="fa fa-search"></i>
+        </span>
+      </div>
+      <input type="text" [(ngModel)]="searchQuery" (change)="onInput($event)" class="form-control form-control-sm" placeholder="Search by Tags"
+        aria-label="Username" aria-describedby="basic-addon1">
+    </div>
+    <div class="list-group w-100" style="overflow-y: auto; height: calc(100% - 7.36rem);font-size: smaller;">
+      <div *ngFor="let echain of emailList" (click)="selectedEmailChain = echain">
+        <span class="list-group-item list-group-item-action flex-column align-items-start border-0"
+          [ngClass]="{active: selectedEmailChain === echain}">
+          <div class="d-flex w-100 justify-content-between">
+            <span class="mb-1 font-weight-bold text-truncate w-75" style="font-size: small;">
+              {{ echain[defaultSelIndex]?.subject }}</span>
+            <small>{{ echain[defaultSelIndex]?.date | date:'EEE dd/M' }}</small>
+          </div>
+          <div class="d-flex w-100 justify-content-between">
+            <span class="mb-1 font-weight-bold text-truncate" style="font-size: smaller; width: 90%;">
+              {{ echain[defaultSelIndex]?.from }}</span>
+            <span *ngIf="echain[defaultSelIndex]?.attachment && echain[defaultSelIndex]?.attachment.length"><i class="fa fa-paperclip" aria-hidden="true"></i></span>
+          </div>
+          <p class="mb-1 text-truncate text-secondary" style="font-size: smaller;height: 1.6rem;"
+            [innerHTML]="echain[defaultSelIndex]?.body">
+          </p>
+        </span>
+      </div>
+    </div>
+  </section>
+  <section class="w-75 border-lighter border-left-0  mh-100 pt-2 pl-4 pr-4 bg-white" style="overflow-y:auto;" *ngIf="selectedEmailChain">
+    <div class="w-100">
+      <h5>{{ selectedEmailChain[0]?.subject }}</h5>
+    </div>
+    <div class="email-section mt-4 border-bottom pb-4" *ngFor="let email of selectedEmailChain">
+      <section class="email-header d-inline-flex w-100">
+        <span class="d-flex" style="width: 3rem;    align-items: center;">
+          <!-- <i class="fa fa-user-circle fa-2x"></i> -->
+          <img src="../../assets/images/user.png" style="width: 3.2rem;" alt="" srcset="">
+        </span>
+        <span class="" style="width: 95%;">
+          <section class="w-100 font-weight-bold" style="font-size: small;"> {{ email?.from }}</section>
+          <section class="w-100 text-secondary" style="font-size: smaller;"> {{ email?.date | date:'EEE dd/M, H:mm a' }}
+          </section>
+          <section class="w-100 text-truncate" title="{{ email?.toDisplay }}"  style="font-size: smaller;"> {{ email?.toDisplay }}</section>
+        </span>
+      </section>
+      <section class="attachment d-flex mt-4 pl-5 pr-5 w-100" style="font-size: x-small; overflow-x: auto">
+        <span *ngFor="let att of email.attachment" class="mr-4">
+          <p class="m-0"><a href="">{{ att.name}}</a></p>
+          <p class="text-secondary">{{ att.size}}</p>
+        </span>
+      </section>
+      <section class="pl-5 pr-5" style="font-size: small;">
+        <span [innerHTML]='email?.body'></span>
+      </section>
+    </div>
+  </section>
+</div>
+<div *ngIf="false">
+  <section class="w-100 border-lighter bg-white" style="height: calc(100vh - 5.28rem);overflow-y: auto;">
+    <div class="input-group p-3 border-lighter-bottom" style="height: 6.4rem;">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon1">
+          <i class="fa fa-search"></i>
+        </span>
+      </div>
+      <input type="text" [(ngModel)]="searchQuery" class="form-control form-control-sm" placeholder="Search by Tags"
+        aria-label="Username" aria-describedby="basic-addon1">
+    </div>
+    <div class="list-group w-100 pb-5" style="font-size: smaller;">
+      <div *ngFor="let echain of emailList" (click)="selectedEmailChain = echain">
+        <span class="list-group-item list-group-item-action flex-column align-items-start border-0"
+          [ngClass]="{active: selectedEmailChain === echain}">
+          
+          <div class="d-flex w-100 justify-content-between">
+            <span class="mb-1 font-weight-bold text-truncate w-75" style="font-size: small;">
+              {{ echain[defaultSelIndex]?.subject }}</span>
+            <small>{{ echain[defaultSelIndex]?.date | date:'EEE dd/M' }}</small>
+          </div>
+
+          <div class="d-flex w-100 justify-content-between">
+            <span class="mb-1 font-weight-bold text-truncate" style="font-size: smaller; width: 90%;">
+              {{ echain[defaultSelIndex]?.to.join(" ; ") }}</span>
+            <span *ngIf="qaservice.hasAttachment(echain)"><i class="fa fa-paperclip" aria-hidden="true"></i></span>
+          </div>
+
+          <section *ngIf="echain === selectedEmailChain" class="w-100 border-lighter border-left-0  mh-100 pt-2 pl-2 pr-2 bg-white">
+              <div class="w-100">
+                <h5>{{ this.selectedEmailChain[0]?.subject }}</h5>
+              </div>
+              <div class="email-section mt-4 border-bottom pb-4" *ngFor="let email of selectedEmailChain">
+                <section class="email-header d-inline-flex w-100">
+                  <span class="d-flex" style="width: 4.8rem;    align-items: center;">
+                    <!-- <i class="fa fa-user-circle fa-2x"></i> -->
+                    <img src="../../assets/images/user.png" style="width: 3.2rem;" alt="" srcset="">
+                  </span>
+                  <span class="" style="width: 95%;">
+                    <section class="w-100 font-weight-bold" style="font-size: small;"> {{ email?.from }}</section>
+                    <section class="w-100 text-secondary" style="font-size: smaller;"> {{ email?.date | date:'EEE dd/M, H:mm a' }}
+                    </section>
+                    <section class="w-100" style="font-size: smaller;"> {{ email?.to.join(' ; ') }}</section>
+                  </span>
+                </section>
+                <section class="attachment d-flex mt-4 pl-1 pr-1 w-100" style="font-size: x-small; overflow-x: auto">
+                  <span *ngFor="let att of email.attachment" class="mr-4">
+                    <p class="m-0"><a href="">{{ att.name}}</a></p>
+                    <p class="text-secondary">{{ att.size}}</p>
+                  </span>
+                </section>
+                <section class="pl-1 pr-1" style="font-size: small;">
+                  <span [innerHTML]='email?.body'></span>
+                </section>
+              </div>
+            </section>
+        </span>
+      </div>
+    </div>
+  </section>
+</div>

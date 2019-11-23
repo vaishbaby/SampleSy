@@ -1,0 +1,136 @@
+.container {
+      max-width:100%;
+      min-height:100vh;
+      width:100%;
+      background-color:#333742;
+  }
+  .Image {
+    object-fit: contain;
+    text-align: right;
+    height: 16.5rem;
+    width: auto;
+  }
+  
+  .dummy {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    opacity: 0.3;
+  }
+ .contents{
+     color: #fbfbfb;
+ }
+ .logo{
+    text-align:center;
+    margin-top: 5rem;
+   }
+.title{
+    color: #fbfbfb;
+    font-family: Carnas-Medium;
+    font-size: 4.5rem;
+    font-weight: 500;
+    text-align:center;
+    margin-top: 1.3rem;
+   }
+   .sub-title{
+    color: #fbfbfb;
+    font-family:Carnas-ExtraLightIt;
+    font-size: 2.6rem;
+    font-weight: 200;
+    text-align:center;
+    opacity: 0.5;
+    }
+   .login-box {
+    background-color: white;
+    border: 3px solid white;
+    border-radius: 5.5px;
+    padding: 4rem;
+    width: 42rem;
+    float: right;
+  }
+  .sign-in{
+    padding-bottom: 2rem;
+    font-size: 2.1rem;
+    color: #444444;
+    font-family: Carnas-Regular;
+    font-weight: normal;
+  }
+  .tx-box{
+    width: 100%;
+    padding: 1.8rem;
+    background-color: #e5e9ed;
+    border-radius: 2.2px;
+    border: solid 0.6px rgba(208, 208, 208, 0.5);
+    font-family: Carnas-Medium;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    line-height: 1;
+  }
+  .login-cont{
+    padding: 0 1.5rem;
+  }
+  .sign-btn{
+    width: 100%;
+    margin-top: 2.3rem;
+    background-color: #333742;
+    border: solid 0.6px#333742;
+    border-radius: 2.2px;
+    padding: 0.8rem;
+    margin-bottom: 2.3rem;
+    font-size: 1.65rem;
+    font-family: Carnas-Regular;
+  }
+ .forget-pwd{
+  color: #787e8c;
+  text-align: center;
+  display: block;
+  font-size: 1.3rem;
+  font-weight: normal;
+  font-family: Carnas-Regular;
+ }
+ .login-text {
+  color: #fbfbfb;
+  margin-top: 6.8rem;
+  text-align: left;
+  font-size: 1.8rem !important;
+  font-weight: 200;
+  font-family: 'Carnas-ExtraLightIt';
+  width: 55.5rem;
+  // opacity: 0.8;
+ }
+ .is-invalid {
+  border: 1px solid red;
+ }
+ .login-text-dms{
+  font-family: 'Carnas-MediumIt';
+  color: #fbfbfb;
+  margin-top: 3.5rem;
+  text-align: left;
+  font-size: 1.8rem !important;
+  font-weight: 500;
+ }
+ .keep-sign-in{
+  margin-top:1.4rem;
+  margin-left: 0.5rem;
+  font-size: 1.3rem;
+  font-weight: normal;
+  font-family: Carnas-Regular;
+  color: #787e8c !important;
+}
+.ch-box{
+  transform: scale(1.4);
+  margin-top:1.5rem;
+}
+.mr-top-lg{
+  padding: 7rem 10rem 5rem 10rem;
+}
+.login-container{
+  // position: absolute;
+  // top: 50%;
+  // left: 50%;
+  // transform: translate(-50%, -50%);
+  // display: block;
+  // width: 136.6rem;
+  // height: auto;
+}

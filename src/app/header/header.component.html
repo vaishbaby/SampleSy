@@ -1,0 +1,45 @@
+<div class="row mr-0">
+  <div class="col-md-12 pd-0">
+    <div class="row mr-0">
+
+        <div class="col-md-4">
+            <span class="h-text">{{headerText}}</span>
+            <span class="calendar" *ngIf="showCalender && headerText =='Dashboard'">
+                <p-calendar (onSelect)="onDateSelect($event, cal)" [showIcon]="true" selectionMode="range" dateFormat="dd M yy"></p-calendar>
+            <!-- <p-calendar #cal [(ngModel)]="appSharedService.dateRange" (onSelect)="onDateSelect($event, cal)" [showIcon]="true" selectionMode="range" dateFormat="dd M yy"></p-calendar> -->
+              </span>
+        </div>
+
+        
+          <span class="spacing_100">
+            <input type="radio" [checked]="weekToDate"(change)="onSelectWeek()" />
+            <label for="radio1">Week to Date</label>
+          </span>
+
+          <span class="spacing_10">
+            <input type="radio" [checked]="monthToDate" (change)="onSelectMonth()" />
+              <label for="radio2">Month to Date</label>
+          </span>
+      
+        
+         
+
+        
+        <div class="col-md-8 text-right pd-r-0">
+            <button [disabled]="entitlement.isEntitled()" class="btn btn-primary h-btn n-p-btn" (click)="onNewCollateral()">
+              <img class="n-c-img" src="./../../assets/images/data.svg">
+              <span>
+                Upload New<br>COLLATERAL
+              </span>
+            </button>
+            <button [disabled]="entitlement.isEntitled()" class="btn btn-primary h-btn n-c-btn" (click)="onNewProposal()">
+              <img class="n-c-img" src="./../../assets/images/plus.svg">
+              <span>
+                Create New<br>PROPOSAL
+              </span>
+            </button>
+        </div>
+    </div>
+      
+  </div>
+</div>

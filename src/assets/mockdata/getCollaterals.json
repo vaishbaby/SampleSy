@@ -1,0 +1,241 @@
+{
+    "listOfCollateralUIModel": [
+        {
+            "collateralId": 1,
+            "proposalName": "Core UI Tool & Services",
+            "docName": "Capital Markets",
+            "annotated": true,
+            "fileName": "Asurian.pdf",
+            "proposalId": 101,
+            "updatedDate": 1555785000000,
+            "setOfTagsUIModel": [
+                {
+                    "tagId": 114,
+                    "tagsDescription": "Azure",
+                    "tagCount": 0,
+                    "collateralId": 0
+                },
+                {
+                    "tagId": 104,
+                    "tagsDescription": "Credit",
+                    "tagCount": 0,
+                    "collateralId": 0
+                },
+                {
+                    "tagId": 113,
+                    "tagsDescription": "AWS",
+                    "tagCount": 0,
+                    "collateralId": 0
+                },
+                {
+                    "tagId": 101,
+                    "tagsDescription": "Sales",
+                    "tagCount": 0,
+                    "collateralId": 0
+                },
+                {
+                    "tagId": 106,
+                    "tagsDescription": "Sales",
+                    "tagCount": 0,
+                    "collateralId": 0
+                },
+                {
+                    "tagId": 108,
+                    "tagsDescription": "Loan",
+                    "tagCount": 0,
+                    "collateralId": 0
+                },
+                {
+                    "tagId": 112,
+                    "tagsDescription": "PCF",
+                    "tagCount": 0,
+                    "collateralId": 0
+                },
+                {
+                    "tagId": 110,
+                    "tagsDescription": "Loan Recovery",
+                    "tagCount": 0,
+                    "collateralId": 0
+                },
+                {
+                    "tagId": 111,
+                    "tagsDescription": "Hadoop",
+                    "tagCount": 0,
+                    "collateralId": 0
+                },
+                {
+                    "tagId": 102,
+                    "tagsDescription": "Loan",
+                    "tagCount": 0,
+                    "collateralId": 0
+                },
+                {
+                    "tagId": 105,
+                    "tagsDescription": "Deposits",
+                    "tagCount": 0,
+                    "collateralId": 0
+                },
+                {
+                    "tagId": 109,
+                    "tagsDescription": "Sales",
+                    "tagCount": 0,
+                    "collateralId": 0
+                },
+                {
+                    "tagId": 103,
+                    "tagsDescription": "Debit",
+                    "tagCount": 0,
+                    "collateralId": 0
+                },
+                {
+                    "tagId": 107,
+                    "tagsDescription": "Loan",
+                    "tagCount": 0,
+                    "collateralId": 0
+                }
+            ],
+            "tagsDisplayValue": null,
+            "collateralTypeUIModel": {
+                "collateralTypeId": 1,
+                "collateralType": "Case Studies"
+            },
+            "fileType": "PDF"
+        },
+        {
+            "collateralId": 7,
+            "proposalName": "RFP Tracker",
+            "docName": "RegTech",
+            "annotated": false,
+            "fileName": "Wells.pdf",
+            "proposalId": 104,
+            "updatedDate": 1559154600000,
+            "setOfTagsUIModel": null,
+            "tagsDisplayValue": null,
+            "collateralTypeUIModel": {
+                "collateralTypeId": 4,
+                "collateralType": "Newsletters"
+            },
+            "fileType": "PDF"
+        },
+        {
+            "collateralId": 9,
+            "proposalName": "NLP AIML Document Parsing",
+            "docName": "Wealth Investments with AI 2",
+            "annotated": false,
+            "fileName": "Wells.pdf",
+            "proposalId": 133,
+            "updatedDate": 1559154600000,
+            "setOfTagsUIModel": null,
+            "tagsDisplayValue": null,
+            "collateralTypeUIModel": {
+                "collateralTypeId": 9,
+                "collateralType": "Brand Stories"
+            },
+            "fileType": "PDF"
+        },
+        {
+            "collateralId": 10,
+            "proposalName": "FX Derivatives Remediation",
+            "docName": "Reporting Transformation",
+            "annotated": true,
+            "fileName": "Asurian.pdf",
+            "proposalId": 103,
+            "updatedDate": 1549909800000,
+            "setOfTagsUIModel": null,
+            "tagsDisplayValue": null,
+            "collateralTypeUIModel": {
+                "collateralTypeId": 1,
+                "collateralType": "Case Studies"
+            },
+            "fileType": "PDF"
+        },
+        {
+            "collateralId": 29,
+            "proposalName": "RFP Tracker",
+            "docName": "RFP-FX",
+            "annotated": false,
+            "fileName": "Wells.pdf",
+            "proposalId": 104,
+            "updatedDate": 1559154600000,
+            "setOfTagsUIModel": null,
+            "tagsDisplayValue": null,
+            "collateralTypeUIModel": {
+                "collateralTypeId": 1,
+                "collateralType": "Case Studies"
+            },
+            "fileType": "PDF"
+        },
+        {
+            "collateralId": 30,
+            "proposalName": "NLP AIML Document Parsing",
+            "docName": "Mortgage",
+            "annotated": false,
+            "fileName": "Wells.pdf",
+            "proposalId": 133,
+            "updatedDate": 1559154600000,
+            "setOfTagsUIModel": null,
+            "tagsDisplayValue": null,
+            "collateralTypeUIModel": {
+                "collateralTypeId": 7,
+                "collateralType": "White Papers"
+            },
+            "fileType": "PDF"
+        },
+        {
+            "collateralId": 31,
+            "proposalName": "Core UI Tool & Services",
+            "docName": "Testing Url",
+            "annotated": false,
+            "fileName": "Asurian.pdf",
+            "proposalId": 101,
+            "updatedDate": 1558981800000,
+            "setOfTagsUIModel": null,
+            "tagsDisplayValue": null,
+            "collateralTypeUIModel": null,
+            "fileType": "PDF"
+        },
+        {
+            "collateralId": 32,
+            "proposalName": null,
+            "docName": "Testing Url",
+            "annotated": false,
+            "fileName": "Asurian.pdf",
+            "proposalId": 0,
+            "updatedDate": 1558981800000,
+            "setOfTagsUIModel": null,
+            "tagsDisplayValue": null,
+            "collateralTypeUIModel": null,
+            "fileType": "PDF"
+        },
+        {
+            "collateralId": 33,
+            "proposalName": null,
+            "docName": "Rebit",
+            "annotated": false,
+            "fileName": "Asurian.pdf",
+            "proposalId": 0,
+            "updatedDate": 1559068200000,
+            "setOfTagsUIModel": null,
+            "tagsDisplayValue": null,
+            "collateralTypeUIModel": {
+                "collateralTypeId": 1,
+                "collateralType": "Case Studies"
+            },
+            "fileType": "PDF"
+        },
+        {
+            "collateralId": 34,
+            "proposalName": null,
+            "docName": "TEst 5678",
+            "annotated": false,
+            "fileName": "Asurian.pdf",
+            "proposalId": 0,
+            "updatedDate": 1559068200000,
+            "setOfTagsUIModel": null,
+            "tagsDisplayValue": null,
+            "collateralTypeUIModel": null,
+            "fileType": "PDF"
+        }
+    ],
+    "totalCollaterals": 19
+}

@@ -1,0 +1,27 @@
+<div class="side-container">
+  <div>
+      <div class="syne-logo">
+          <img class="syne-img" src="./../../assets/images/syne-logo.svg" alt="">
+        </div>
+        <a class="side-logo ds-pd-tp" routerLink="/dms/dashboard" routerLinkActive="active-nav" pTooltip="Dashboard">
+          <div class="img ds-img"></div>
+        </a>
+        <a class="side-logo" routerLink="/dms/proposals" routerLinkActive="active-nav" pTooltip="Proposals">
+          <div class="img praposals-img"></div>
+        </a>
+        <a class="side-logo" routerLink="/dms/collaterals" routerLinkActive="active-nav" pTooltip="Collaterals">
+          <div class="img collaterals-img"></div>
+        </a>
+        <a class="side-logo" routerLink="/dms/qa" routerLinkActive="active-nav" pTooltip="Q&A">
+          <div class="img qaf-img"></div>
+        </a>
+        <a class="side-logo" routerLink="/dms/sme" routerLinkActive="active-nav" pTooltip="SME">
+          <div class="img sme-img"></div>
+        </a>
+  </div>
+  <div class="logout-container">
+    <img src="../../assets/images/man.svg"/>
+    <button class="btn sign-out" (click)="onSignOut($event)">Sign Out</button>
+  </div>
+    
+</div>

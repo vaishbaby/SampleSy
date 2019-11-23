@@ -1,0 +1,92 @@
+.syne-logo{
+    position: relative;
+    height: 5.2rem;
+    background-color: #1c1e26;
+}
+.syne-img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1.7rem;
+    height: 1.7rem;
+}
+.side-logo{
+    text-align: center;
+    vertical-align: middle;
+    padding: 1rem 0;
+    display: inline-block;
+    width: 100%;
+}
+.img {
+    padding: 1.2rem 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto;
+}
+
+.ds-pd-tp{
+    padding-top: 2rem;
+}
+.ds-img {
+    background-image: url("/assets/images/dashboard.svg");
+}
+
+.active-nav .ds-img {
+    background-image: url("/assets/images/dashboard2.svg");   
+    border-right: 4px solid #f8e52d;
+    margin-left: 0.3rem; 
+}
+.praposals-img {
+    background-image: url("/assets/images/praposallisting.svg");
+}
+.active-nav .praposals-img {
+    background-image: url("/assets/images/praposallisting2.svg");
+    border-right: 4px solid #f8e52d;
+    margin-left: 0.5rem;
+}
+.collaterals-img{
+    background-image: url("/assets/images/collaterallisting.svg");
+}
+.active-nav .collaterals-img{
+    background-image: url("/assets/images/collaterallisting2.svg");
+    border-right: 4px solid #f8e52d;
+    margin-left: 0.3rem;
+}
+.qaf-img{
+    background-image: url("/assets/images/q-a-forum3.svg");
+}
+.active-nav .qaf-img{
+    background-image: url("/assets/images/q-a-forum4.svg");
+    border-right: 4px solid #f8e52d;
+    margin-left: 0.3rem;
+}
+.sme-img{
+    background-image: url("/assets/images/sme-icon.svg");
+}
+.active-nav .sme-img{
+    background-image: url("/assets/images/sme-icon2.svg");
+    border-right: 4px solid #f8e52d;
+    margin-left: 0.3rem;
+}
+.side-container{
+    
+}
+.logout-container{
+    position: fixed;
+    bottom: 1rem;
+    width: 5.2rem;
+    text-align: center;
+}
+
+.sign-out{
+    text-align: center;
+    font-size: 0.7rem;
+    font-family: 'Carnas-Medium';
+    padding: .3rem .6rem;
+    border-radius: .8rem;
+    background-color: #fd8469;
+    font-weight: 500;
+    color: #fbfbfb;
+    cursor: pointer;
+}

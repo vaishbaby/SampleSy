@@ -1,0 +1,70 @@
+<ng-container *ngIf="card">
+    <div [style.borderTopColor]="getColor(card.status)" class="col-card"
+        [ngClass]="{'mr-l-0': marginLeftFlag}">
+        <div class="card-row">
+            <div class="card-label">{{"Proposal Name : "}}</div>
+            <div class="card-label-value1">{{card?.proposalName}}</div>
+        </div>
+        <div class="row card-row reg-up-con">
+            <div class="pd-0 col-md-5">
+                <div class="card-label">{{"Client Name : "}}</div>
+            </div>
+            <div class="pd-0 col-md-7">
+                <!-- <div class="client-name">{{card?.clientName}}</div> -->
+                <div class="client-name text-truncate">{{card?.clientUIModel?.clientName}}</div>
+            </div>
+        </div>
+        <div class="row card-row ann-up-con card-border">
+            <div class="pd-0 col-md-6">
+                <div class="card-label upd-lb">{{"Start Date : "}}</div>
+                <div class="card-label upd-vl">{{card?.startDate | date:'mediumDate'}}</div>
+            </div>
+            <div class="pd-0 col-md-6">
+                <div class="card-label upd-lb">{{"End Date : "}}</div>
+                <div class="card-label upd-vl">{{card?.endDate | date:'mediumDate'}}</div>
+            </div>
+        </div>
+        <div class="card-row">
+            <div class="card-label">{{"Requirement : "}}</div>
+            <div class="card-label-value1">
+                {{card?.requirement}}
+            </div>
+        </div>
+        <div class="row card-row reg-up-con">
+            <div class="pd-0 col-md-6">
+                <div class="card-label ann-lb">{{"Region : "}}</div>
+                <div class="card-label-value1">{{card?.region}}</div>
+            </div>
+            <div class="pd-0 col-md-6">
+                <div class="card-label upd-lb">{{"Status : "}}</div>
+                <div class="card-label-value1">{{card?.status}}</div>
+            </div>
+        </div>
+        <div class="row card-row reg-up-con">
+            <div class="pd-0 col-md-5">
+                <a (click)="onViewCollaterals($event)" class="view-coll">
+                    <div class="card-label"><u>{{"View Collateral"}}</u></div>
+                </a>
+            </div>
+            <!-- <div class="pd-0 col-md-7" (click)="onViewCollaterals($event)">
+                <span class="file-holder">
+                    <img class="file-icon" src="../../assets/images/word.svg">
+                    <span class="dot">9</span>
+                </span>
+                <span class="file-holder">
+                    <img class="file-icon" src="../../assets/images/powerpoint.svg">
+                    <span class="dot">1</span>
+                </span>
+                <span class="file-holder">
+                    <img class="file-icon" src="../../assets/images/pdf.svg">
+                    <span class="dot">99</span>
+                </span>
+            </div> -->
+        </div>
+        <div class="card-row">
+            <button [disabled]="entitlement.isEntitled()" class="card-btn edit-btn" (click)="onEdit($event)">EDIT</button>
+            <button [disabled]="entitlement.isEntitled()" class="card-btn del-btn" (click)="onDelete($event)">DELETE</button>
+            <button [disabled]="entitlement.isEntitled()" class="card-btn view-btn" (click)="onAdd($event)">ADD COLLATERAL</button>
+        </div>
+    </div>
+</ng-container>

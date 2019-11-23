@@ -1,0 +1,79 @@
+<div class="side-panel">
+    <div class="status-panel pd-1">
+        <div class="total-proposal-count">{{proposalData?.totalAvailableProposals}}</div>
+        <div class="total-txt">Total Available</div>
+        <div class="pro-txt">Proposal</div>
+        <div class="line-bar-container" *ngIf="displayLineChart && lineChartData && lineChartOptions">
+            <p-chart type="horizontalBar" width="100%" height="20" [data]="lineChartData" [options]="lineChartOptions"
+                [responsive]="true">
+            </p-chart>
+        </div>
+        <div>
+            <div *ngFor="let proItem of proposalData?.statusCounts;index as i;" class="pro-count-box">
+                <hr [style.backgroundColor]="proItem?.backgroundColor" align="left">
+                <div class="pro-count">{{proItem?.count}}</div>
+                <div class="pro-name">{{proItem?.label}}</div>
+            </div>
+        </div>
+    </div>
+    <div class="bu-panel pd-1">
+        <div>
+            <div class="bu-title">BU wise Proposals</div>
+            <p-chart type="horizontalBar" [data]="barChartData" [options]="barChartOptions" [responsive]="true"
+                height="225" *ngIf="displayLineChart && barChartData && barChartOptions"></p-chart>
+        </div>
+    </div>
+
+</div>
+
+<div class="right-panel">
+    <div class="filter-data mr-0 clearfix">
+        <div class="filter-item apply-ft pd-l-0">Apply<br>Filter</div>
+        <div class="filter-item pd-0 mr-r-1">
+            <span class="ft-label">Client</span>
+            <p-dropdown class="proposal-dropdown" [options]="clientData" #client
+                [(ngModel)]="searchCriteria.clientName"></p-dropdown>
+
+        </div>
+        <div class="filter-item pd-0 mr-r-1">
+            <span class="ft-label">Region</span>
+            <p-dropdown class="proposal-dropdown" [options]="regionListOptions" [(ngModel)]="searchCriteria.region">
+            </p-dropdown>
+        </div>
+        <div class="filter-item pd-0 mr-r-1">
+            <span class="ft-label">Status</span>
+            <p-dropdown class="proposal-dropdown" [options]="statusListOptions" [(ngModel)]="searchCriteria.status">
+            </p-dropdown>
+        </div>
+        <div class="filter-item pd-0 mr-r-1 wid-18">
+            <span class="ft-label">Date Range (Start - End Date)</span>
+            <div class="cal-container">
+                <p-calendar class="calender" #cal [(ngModel)]="searchCriteria.rangeDates"
+                    (onSelect)="onProposalDateRangeSelect(cal)" selectionMode="range" [readonlyInput]="true">
+                </p-calendar>
+                <i *ngIf="searchCriteria?.rangeDates" class="calender-clear ui-dropdown-clear-icon pi pi-times"
+                    (click)="onClearClick(cal)"></i>
+            </div>
+        </div>
+        <div class="filter-item wid-15 pd-0 mr-r-1">
+            <button class="btn btn-primary search-btn" (click)="onSearch($event)">Search</button>
+        </div>
+
+    </div>
+    <div class="scroll-container clearfix">
+        <div class="card-container clearfix">
+            <app-proposal-card *ngFor="let card of displayProposalList;index as i;" [cardIndex]="i" [card]="card"
+                (edit)="onEdit($event)" (add)="onAdd($event)" (delete)="onDelete($event)"
+                (viewCollaterals)="onViewCollaterals($event)">
+            </app-proposal-card>
+        </div>
+        <p-paginator *ngIf="totalRecords > displayRecordSize" #paginator [rows]="displayRecordSize"
+            [totalRecords]="totalRecords" (onPageChange)="paginate($event)"></p-paginator>
+    </div>
+</div>
+<p-confirmDialog #cd [style]="{width: '30vw'}" styleClass="delete-popup">
+    <p-footer>
+        <button type="button" class="delete-btn" pButton icon="pi pi-times" label="No" (click)="cd.reject()"></button>
+        <button type="button" class="delete-btn" pButton icon="pi pi-check" label="Yes" (click)="cd.accept()"></button>
+    </p-footer>
+</p-confirmDialog>

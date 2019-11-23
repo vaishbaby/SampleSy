@@ -1,0 +1,87 @@
+<p-dialog [visible]="true" [modal]="true" [resizable]="false" [closable]="false" [draggable]="false" (onHide)="close()"
+    appendTo="body" [style]="{'max-width':'75%', 'min-width':'20%', 'width':'32%'}">
+    <p-header>
+        <div class="dialog-header">
+            <ng-container *ngIf="openType !='edit'">
+                <!-- <pre>{{openType|json}}</pre> -->
+                <img *ngIf="openType=='newFromHeader'" src="../../assets/images/upload-col-icon.svg" class="img-icon">
+                <img *ngIf="openType=='newFromPraposal'" src="../../assets/images/upload-from-pr.svg"
+                    class="img-icon-pr">
+            </ng-container>
+            <a role="button" tabindex="0" (click)="close()" class="close-btn pull-right">
+                <img src="../../assets/images/close.svg">
+            </a>
+            <span *ngIf="openType=='newFromHeader'" class="title"> Upload New Collateral</span>
+            <div *ngIf="openType=='edit'" class="">
+                <div class="title-pr title-ed">Edit</div>
+                <span class="sub-title-pr2">Uploaded Collateral</span>
+            </div>
+            <div *ngIf="openType=='newFromPraposal'">
+                <div class="title-pr"> Upload Collateral</div>
+                <span class="sub-title-pr1">Proposal Name :</span>
+                <span class="sub-title-pr2">{{proposalName}}</span>
+            </div>
+
+
+        </div>
+    </p-header>
+    <div class="collateral-container">
+        <form [formGroup]="collateralForm">
+            <div class="collateral-container">
+                <div class="form-group">
+                    <label>Document Name </label><br>
+                    <input type="text" #documentNameRef [(ngModel)]="collateralObj.docName" class="form-control tx-box"
+                        placeholder="Enter Document Name here…." formControlName="docName"
+                        [ngClass]="{ 'is-invalid': submitted && f.docName.errors }" />
+                    <div *ngIf="submitted && f.docName.errors" class="invalid-feedback">
+                        <div *ngIf="f.docName.errors.required"> Document Name is required</div>
+                    </div>
+                </div>
+                <div class="form-group mt-1">
+                    <label> Collateral Type </label><br>
+                    <p-autoComplete class="form-control coll-type" [(ngModel)]="collateralObj.collateralTypeUIModel"
+                        [suggestions]="suggestedCollateralTypes" (completeMethod)="search($event)"
+                        placeholder="Enter Collateral Type here…." formControlName="collateralTypeUIModel"
+                        field="collateralType" dataKey="collateralTypeId"
+                        [ngClass]="{ 'is-invalid': submitted && f.collateralTypeUIModel.errors }">
+                    </p-autoComplete>
+                    <div *ngIf="submitted && f.collateralTypeUIModel.errors" class="invalid-feedback">
+                        <div *ngIf="f.collateralTypeUIModel.errors.required">Collateral Type is required</div>
+                    </div>
+                </div>
+                <div class="form-group mt-1">
+                    <label>Upload Document :</label>
+                    <span class="uploaded-file-ic" *ngFor="let file of uploadedFiles">
+                        <img *ngIf="(file?.fileName.split('.').pop().toLowerCase() == 'doc') || (file?.fileName.split('.').pop().toLowerCase() == 'docx')"
+                            class="file-icon" src="../../assets/images/word.svg">
+                        <img *ngIf="(file?.fileName.split('.').pop().toLowerCase() == 'ppt') || (file?.fileName.split('.').pop().toLowerCase() == 'pptx')"
+                            class="file-icon" src="../../assets/images/powerpoint.svg">
+                        <img *ngIf="file?.fileName.split('.').pop().toLowerCase() == 'pdf'" class="file-icon"
+                            src="../../assets/images/pdf.svg">
+                        {{file?.fileName?.split('.').slice(0, -1).join('.')}}
+                        <a class="uploaded-file-close" (click)="removeSelectedFiles($event, file)">X</a></span>
+                    <div class="drop-box">
+                        <input type="file" accept=".doc, .docx, .ppt, .pptx,.pdf " style="display:none;"
+                            (change)="fileEvent($event)" #file />
+                        <input type="image" class="form-control upload-btn" src="../../assets/images/upload-btn.svg"
+                            (click)="file.click()" formControlName="fileUpload"
+                            [ngClass]="{ 'is-invalid': submitted && f.fileUpload.errors }" />
+                        <div class="drag-drop text-center">
+                            Click to Browse
+                            <div class="text-center doc-ppt">Upload only Doc, PPT &amp; PDF</div>
+                        </div>
+                        <div *ngIf="submitted && f.fileUpload.errors" class="invalid-feedback">
+                            <div *ngIf="f.fileUpload.errors.required"> Upload File is required</div>
+                        </div>
+                    </div>
+
+                </div>
+                <button type="button" class="btn btn-primary mt-2 mr-1 c-btn cancle-btn pr-btn"
+                    (click)="close()">CANCEL</button>
+                <button type="button" class="btn btn-primary mt-2 ml-1 c-btn pr-btn"
+                    (click)="onSubmit(collateralForm)">SUBMIT</button>
+
+            </div>
+        </form>
+    </div>
+</p-dialog>

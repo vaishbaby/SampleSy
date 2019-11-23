@@ -1,0 +1,26 @@
+[
+    {
+        "collateralTypeId": 1,
+        "collateralType": "Case Studies"
+    },
+    {
+        "collateralTypeId": 3,
+        "collateralType": "Corporate Overview"
+    },
+    {
+        "collateralTypeId": 4,
+        "collateralType": "Newsletters"
+    },
+    {
+        "collateralTypeId": 5,
+        "collateralType": "Proposals & Presentation"
+    },
+    {
+        "collateralTypeId": 7,
+        "collateralType": "White Papers"
+    },
+    {
+        "collateralTypeId": 9,
+        "collateralType": "Brand Stories"
+    }
+]

@@ -1,0 +1,74 @@
+<div class="container">
+    <!-- <img src="../../assets/images/synechron-logo.svg" class="logo">
+  
+   <img src="../../assets/images/login.svg"  class="Image"> -->
+    <div class="login-container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3 logo">
+                <img src="../../assets/images/synechron-logo.svg">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 offset-md-3 title">
+                <span>Docket Management System</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 offset-md-3 sub-title">
+                <span>a comprehensive collaboration tool</span>
+            </div>
+        </div>
+        <div class="row mr-top-lg">
+            <div class="col-md-7 Image"> <img src="../../assets/images/group-4.svg">
+                <p class="login-text">
+                    The <span class="login-text-dms">
+                        Synechron Docket Management System
+                    </span> (SDMS)
+                    is a centralized Docket Management system that
+                    provides the ability to upload, annotate/tag,
+                    search, view, download, and submit documents.
+                    <br>
+                    <br>
+                    Relevant annotations/tags
+                    can be added for any document and these documents
+                    can be easily searched based on the associated tags.
+                </p>
+            </div>
+
+            <div class="col-md-5">
+                <div class="login-box">
+                    <h1 class="sign-in">
+                        SIGN IN TO YOUR ACCOUNT
+                    </h1>
+                    <form [formGroup]="loginForm">
+                        <div class="form-group">
+                            <input type="text" class="form-control tx-box" placeholder="User Name"
+                                formControlName="userName"
+                                [ngClass]="{ 'is-invalid': submitted && f.userName.errors }" />
+                            <div *ngIf="submitted && f.userName.errors" class="invalid-feedback">
+                                <div *ngIf="f.userName.errors.required"> User Name is required</div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control tx-box" placeholder="Password"
+                                formControlName="password"
+                                [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+                            <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                                <div *ngIf="f.password.errors.required"> Password is required</div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="checkbox" name="signIn" class="ch-box" /> <span class="keep-sign-in"> keep me
+                                signed in</span>
+                        </div>
+                        <button type="button" class="btn btn-primary sign-btn" (click)="onLogin()"
+                            (keyup.enter)="onLogin()">SIGN IN</button>
+                        <a class="forget-pwd" href="https://synepwd.synechron.com/"><span> Forget your Password?
+                            </span></a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

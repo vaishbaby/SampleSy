@@ -1,0 +1,495 @@
+{
+    "listOFSMEUIModel":[
+    {
+        "detailsId": 1,
+        "domain": "Data Sciennce",
+        "subDomain": "Model management",
+        "region": "Charlotte",
+        "listOfSMEUIModel": [
+            {
+                "id": 0,
+                "name": "Robert huntsman",
+                "email": "Robert.huntsman@synechron.com",
+                "designation": "Asso. Director",
+                "contactInfo": "+20-2458415"
+            },
+            {
+                "id": 0,
+                "name": "Vishal Gadekar",
+                "email": "Vishal.Gadekar@synechron.com",
+                "designation": "Sr. Director(Technology)",
+                "contactInfo": "+54125478"
+            }
+        ],
+        "countOFSmeArchitects": 0,
+        "countOfSmeDomain": 0,
+        "countOfSmeSubDomain": 0
+    },
+    {
+        "detailsId": 2,
+        "domain": "Data Science",
+        "subDomain": "Credit Risk",
+        "region": "Charlotte",
+        "listOfSMEUIModel": [
+            {
+                "id": 0,
+                "name": "Ravi palwe",
+                "email": "Ravi.palwe@synechron.com",
+                "designation": "Sr.Manager",
+                "contactInfo": "+20-2541"
+            }
+        ],
+        "countOFSmeArchitects": 0,
+        "countOfSmeDomain": 0,
+        "countOfSmeSubDomain": 0
+    },
+    {
+        "detailsId": 3,
+        "domain": "Data Science",
+        "subDomain": "Model management",
+        "region": "UAE",
+        "listOfSMEUIModel": [
+            {
+                "id": 0,
+                "name": "Json Stantham",
+                "email": "Json.Stantham@synechron.com",
+                "designation": "Sr. Director(Sales)",
+                "contactInfo": "+54125478"
+            }
+        ],
+        "countOFSmeArchitects": 0,
+        "countOfSmeDomain": 0,
+        "countOfSmeSubDomain": 0
+    },
+    {
+        "detailsId": 1,
+        "domain": "Data Sciennce",
+        "subDomain": "Model management",
+        "region": "Charlotte",
+        "listOfSMEUIModel": [
+            {
+                "id": 0,
+                "name": "Robert huntsman",
+                "email": "Robert.huntsman@synechron.com",
+                "designation": "Asso. Director",
+                "contactInfo": "+20-2458415"
+            },
+            {
+                "id": 0,
+                "name": "Vishal Gadekar",
+                "email": "Vishal.Gadekar@synechron.com",
+                "designation": "Sr. Director(Technology)",
+                "contactInfo": "+54125478"
+            }
+        ],
+        "countOFSmeArchitects": 0,
+        "countOfSmeDomain": 0,
+        "countOfSmeSubDomain": 0
+    },
+    {
+        "detailsId": 2,
+        "domain": "Data Science",
+        "subDomain": "Credit Risk",
+        "region": "Charlotte",
+        "listOfSMEUIModel": [
+            {
+                "id": 0,
+                "name": "Ravi palwe",
+                "email": "Ravi.palwe@synechron.com",
+                "designation": "Sr.Manager",
+                "contactInfo": "+20-2541"
+            }
+        ],
+        "countOFSmeArchitects": 0,
+        "countOfSmeDomain": 0,
+        "countOfSmeSubDomain": 0
+    },
+    {
+        "detailsId": 3,
+        "domain": "Data Science",
+        "subDomain": "Model management",
+        "region": "UAE",
+        "listOfSMEUIModel": [
+            {
+                "id": 0,
+                "name": "Json Stantham",
+                "email": "Json.Stantham@synechron.com",
+                "designation": "Sr. Director(Sales)",
+                "contactInfo": "+54125478"
+            }
+        ],
+        "countOFSmeArchitects": 0,
+        "countOfSmeDomain": 0,
+        "countOfSmeSubDomain": 0
+    },
+    {
+        "detailsId": 1,
+        "domain": "Data Sciennce",
+        "subDomain": "Model management",
+        "region": "Charlotte",
+        "listOfSMEUIModel": [
+            {
+                "id": 0,
+                "name": "Robert huntsman",
+                "email": "Robert.huntsman@synechron.com",
+                "designation": "Asso. Director",
+                "contactInfo": "+20-2458415"
+            },
+            {
+                "id": 0,
+                "name": "Vishal Gadekar",
+                "email": "Vishal.Gadekar@synechron.com",
+                "designation": "Sr. Director(Technology)",
+                "contactInfo": "+54125478"
+            }
+        ],
+        "countOFSmeArchitects": 0,
+        "countOfSmeDomain": 0,
+        "countOfSmeSubDomain": 0
+    },
+    {
+        "detailsId": 2,
+        "domain": "Data Science",
+        "subDomain": "Credit Risk",
+        "region": "Charlotte",
+        "listOfSMEUIModel": [
+            {
+                "id": 0,
+                "name": "Ravi palwe",
+                "email": "Ravi.palwe@synechron.com",
+                "designation": "Sr.Manager",
+                "contactInfo": "+20-2541"
+            }
+        ],
+        "countOFSmeArchitects": 0,
+        "countOfSmeDomain": 0,
+        "countOfSmeSubDomain": 0
+    },
+    {
+        "detailsId": 3,
+        "domain": "Data Science",
+        "subDomain": "Model management",
+        "region": "UAE",
+        "listOfSMEUIModel": [
+            {
+                "id": 0,
+                "name": "Json Stantham",
+                "email": "Json.Stantham@synechron.com",
+                "designation": "Sr. Director(Sales)",
+                "contactInfo": "+54125478"
+            }
+        ],
+        "countOFSmeArchitects": 0,
+        "countOfSmeDomain": 0,
+        "countOfSmeSubDomain": 0
+    },
+    {
+        "detailsId": 1,
+        "domain": "Data Sciennce",
+        "subDomain": "Model management",
+        "region": "Charlotte",
+        "listOfSMEUIModel": [
+            {
+                "id": 0,
+                "name": "Robert huntsman",
+                "email": "Robert.huntsman@synechron.com",
+                "designation": "Asso. Director",
+                "contactInfo": "+20-2458415"
+            },
+            {
+                "id": 0,
+                "name": "Vishal Gadekar",
+                "email": "Vishal.Gadekar@synechron.com",
+                "designation": "Sr. Director(Technology)",
+                "contactInfo": "+54125478"
+            }
+        ],
+        "countOFSmeArchitects": 0,
+        "countOfSmeDomain": 0,
+        "countOfSmeSubDomain": 0
+    },
+    {
+        "detailsId": 2,
+        "domain": "Data Science",
+        "subDomain": "Credit Risk",
+        "region": "Charlotte",
+        "listOfSMEUIModel": [
+            {
+                "id": 0,
+                "name": "Ravi palwe",
+                "email": "Ravi.palwe@synechron.com",
+                "designation": "Sr.Manager",
+                "contactInfo": "+20-2541"
+            }
+        ],
+        "countOFSmeArchitects": 0,
+        "countOfSmeDomain": 0,
+        "countOfSmeSubDomain": 0
+    },
+    {
+        "detailsId": 3,
+        "domain": "Data Science",
+        "subDomain": "Model management",
+        "region": "UAE",
+        "listOfSMEUIModel": [
+            {
+                "id": 0,
+                "name": "Json Stantham",
+                "email": "Json.Stantham@synechron.com",
+                "designation": "Sr. Director(Sales)",
+                "contactInfo": "+54125478"
+            }
+        ],
+        "countOFSmeArchitects": 0,
+        "countOfSmeDomain": 0,
+        "countOfSmeSubDomain": 0
+    },
+    {
+        "detailsId": 1,
+        "domain": "Data Sciennce",
+        "subDomain": "Model management",
+        "region": "Charlotte",
+        "listOfSMEUIModel": [
+            {
+                "id": 0,
+                "name": "Robert huntsman",
+                "email": "Robert.huntsman@synechron.com",
+                "designation": "Asso. Director",
+                "contactInfo": "+20-2458415"
+            },
+            {
+                "id": 0,
+                "name": "Vishal Gadekar",
+                "email": "Vishal.Gadekar@synechron.com",
+                "designation": "Sr. Director(Technology)",
+                "contactInfo": "+54125478"
+            }
+        ],
+        "countOFSmeArchitects": 0,
+        "countOfSmeDomain": 0,
+        "countOfSmeSubDomain": 0
+    },
+    {
+        "detailsId": 2,
+        "domain": "Data Science",
+        "subDomain": "Credit Risk",
+        "region": "Charlotte",
+        "listOfSMEUIModel": [
+            {
+                "id": 0,
+                "name": "Ravi palwe",
+                "email": "Ravi.palwe@synechron.com",
+                "designation": "Sr.Manager",
+                "contactInfo": "+20-2541"
+            }
+        ],
+        "countOFSmeArchitects": 0,
+        "countOfSmeDomain": 0,
+        "countOfSmeSubDomain": 0
+    },
+    {
+        "detailsId": 3,
+        "domain": "Data Science",
+        "subDomain": "Model management",
+        "region": "UAE",
+        "listOfSMEUIModel": [
+            {
+                "id": 0,
+                "name": "Json Stantham",
+                "email": "Json.Stantham@synechron.com",
+                "designation": "Sr. Director(Sales)",
+                "contactInfo": "+54125478"
+            }
+        ],
+        "countOFSmeArchitects": 0,
+        "countOfSmeDomain": 0,
+        "countOfSmeSubDomain": 0
+    },
+    {
+        "detailsId": 1,
+        "domain": "Data Sciennce",
+        "subDomain": "Model management",
+        "region": "Charlotte",
+        "listOfSMEUIModel": [
+            {
+                "id": 0,
+                "name": "Robert huntsman",
+                "email": "Robert.huntsman@synechron.com",
+                "designation": "Asso. Director",
+                "contactInfo": "+20-2458415"
+            },
+            {
+                "id": 0,
+                "name": "Vishal Gadekar",
+                "email": "Vishal.Gadekar@synechron.com",
+                "designation": "Sr. Director(Technology)",
+                "contactInfo": "+54125478"
+            }
+        ],
+        "countOFSmeArchitects": 0,
+        "countOfSmeDomain": 0,
+        "countOfSmeSubDomain": 0
+    },
+    {
+        "detailsId": 2,
+        "domain": "Data Science",
+        "subDomain": "Credit Risk",
+        "region": "Charlotte",
+        "listOfSMEUIModel": [
+            {
+                "id": 0,
+                "name": "Ravi palwe",
+                "email": "Ravi.palwe@synechron.com",
+                "designation": "Sr.Manager",
+                "contactInfo": "+20-2541"
+            }
+        ],
+        "countOFSmeArchitects": 0,
+        "countOfSmeDomain": 0,
+        "countOfSmeSubDomain": 0
+    },
+    {
+        "detailsId": 3,
+        "domain": "Data Science",
+        "subDomain": "Model management",
+        "region": "UAE",
+        "listOfSMEUIModel": [
+            {
+                "id": 0,
+                "name": "Json Stantham",
+                "email": "Json.Stantham@synechron.com",
+                "designation": "Sr. Director(Sales)",
+                "contactInfo": "+54125478"
+            }
+        ],
+        "countOFSmeArchitects": 0,
+        "countOfSmeDomain": 0,
+        "countOfSmeSubDomain": 0
+    },
+    {
+        "detailsId": 1,
+        "domain": "Data Sciennce",
+        "subDomain": "Model management",
+        "region": "Charlotte",
+        "listOfSMEUIModel": [
+            {
+                "id": 0,
+                "name": "Robert huntsman",
+                "email": "Robert.huntsman@synechron.com",
+                "designation": "Asso. Director",
+                "contactInfo": "+20-2458415"
+            },
+            {
+                "id": 0,
+                "name": "Vishal Gadekar",
+                "email": "Vishal.Gadekar@synechron.com",
+                "designation": "Sr. Director(Technology)",
+                "contactInfo": "+54125478"
+            }
+        ],
+        "countOFSmeArchitects": 0,
+        "countOfSmeDomain": 0,
+        "countOfSmeSubDomain": 0
+    },
+    {
+        "detailsId": 2,
+        "domain": "Data Science",
+        "subDomain": "Credit Risk",
+        "region": "Charlotte",
+        "listOfSMEUIModel": [
+            {
+                "id": 0,
+                "name": "Ravi palwe",
+                "email": "Ravi.palwe@synechron.com",
+                "designation": "Sr.Manager",
+                "contactInfo": "+20-2541"
+            }
+        ],
+        "countOFSmeArchitects": 0,
+        "countOfSmeDomain": 0,
+        "countOfSmeSubDomain": 0
+    },
+    {
+        "detailsId": 3,
+        "domain": "Data Science",
+        "subDomain": "Model management",
+        "region": "UAE",
+        "listOfSMEUIModel": [
+            {
+                "id": 0,
+                "name": "Json Stantham",
+                "email": "Json.Stantham@synechron.com",
+                "designation": "Sr. Director(Sales)",
+                "contactInfo": "+54125478"
+            }
+        ],
+        "countOFSmeArchitects": 0,
+        "countOfSmeDomain": 0,
+        "countOfSmeSubDomain": 0
+    },
+    {
+        "detailsId": 1,
+        "domain": "Data Sciennce",
+        "subDomain": "Model management",
+        "region": "Charlotte",
+        "listOfSMEUIModel": [
+            {
+                "id": 0,
+                "name": "Robert huntsman",
+                "email": "Robert.huntsman@synechron.com",
+                "designation": "Asso. Director",
+                "contactInfo": "+20-2458415"
+            },
+            {
+                "id": 0,
+                "name": "Vishal Gadekar",
+                "email": "Vishal.Gadekar@synechron.com",
+                "designation": "Sr. Director(Technology)",
+                "contactInfo": "+54125478"
+            }
+        ],
+        "countOFSmeArchitects": 0,
+        "countOfSmeDomain": 0,
+        "countOfSmeSubDomain": 0
+    },
+    {
+        "detailsId": 2,
+        "domain": "Data Science",
+        "subDomain": "Credit Risk",
+        "region": "Charlotte",
+        "listOfSMEUIModel": [
+            {
+                "id": 0,
+                "name": "Ravi palwe",
+                "email": "Ravi.palwe@synechron.com",
+                "designation": "Sr.Manager",
+                "contactInfo": "+20-2541"
+            }
+        ],
+        "countOFSmeArchitects": 0,
+        "countOfSmeDomain": 0,
+        "countOfSmeSubDomain": 0
+    },
+    {
+        "detailsId": 3,
+        "domain": "Data Science",
+        "subDomain": "Model management",
+        "region": "UAE",
+        "listOfSMEUIModel": [
+            {
+                "id": 0,
+                "name": "Json Stantham",
+                "email": "Json.Stantham@synechron.com",
+                "designation": "Sr. Director(Sales)",
+                "contactInfo": "+54125478"
+            }
+        ],
+        "countOFSmeArchitects": 0,
+        "countOfSmeDomain": 0,
+        "countOfSmeSubDomain": 0
+    }
+ 
+    
+],
+"countOFSmeDomainKeyword":23
+}

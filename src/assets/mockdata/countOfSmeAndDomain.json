@@ -1,0 +1,23 @@
+{
+    "totalSmeArchitects": 4,
+    "totalSubDomains": 2,
+    "totalDomains": 2,
+    "mapOfLocationVsCount": {
+        "Charlotte": 1,
+        "New Jersy,USA": 2,
+        " Pune": 1,
+        "London": 1,
+        "pune": 4,
+        "UAE": 1,
+        "Pune,India": 3,
+        "New York,USA": 1,
+        "Hyderabad": 1,
+        "London,UK": 1,
+        "USCentral": 0,
+        "New York": 0,
+        "Paris": 0,
+        "Singapore": 0,
+        "UK": 0,
+        "Amsterdam": 0
+    }
+}

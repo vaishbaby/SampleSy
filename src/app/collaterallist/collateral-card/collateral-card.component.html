@@ -1,0 +1,42 @@
+<ng-container *ngIf="card">
+    <div [style.borderTopColor]="card?.collateralTypeUIModel?.color?card?.collateralTypeUIModel?.color:'#f00'" class="col-card" [ngClass]="{'mr-l-0': marginLeftFlag}">
+        <div class="col-type-img-con card-row">
+            <img *ngIf="card.fileName?.split('.').pop().toLowerCase() == 'doc'" src="./../../assets/images/word.svg" alt="">
+            <img *ngIf="card.fileName?.split('.').pop().toLowerCase() == 'pdf'" src="./../../assets/images/pdf.svg" alt="">
+            <img *ngIf="card.fileName?.split('.').pop().toLowerCase() == 'ppt'" src="./../../assets/images/powerpoint.svg" alt="">
+        </div>
+        <div class="card-row">
+            <div class="card-label">{{"Collateral Type : "}}</div>
+            <div class="card-label-value1">{{card?.collateralTypeUIModel?.collateralType}}</div>
+        </div>
+        <div class="card-row dc-cn">
+            <div class="card-label">{{"Document Name : "}}</div>
+            <div class="card-label-value2">{{card.docName}}</div>
+        </div>
+        <div class="row card-row ann-up-con card-border">
+            <div style="padding: 0;" class="col-md-6">
+                    <div class="card-label ann-lb">{{"Annotated : "}}</div>
+                    <div class="card-label ann-vl">{{card.annotated}}</div>
+            </div>
+                <div style="padding: 0;" class="col-md-6">
+                        <div class="card-label upd-lb">{{"Uploaded on : "}}</div>
+                        <div class="card-label upd-vl">{{card.updatedDate | date:'mediumDate'}}</div>
+                </div>
+        </div>
+        <div class="card-row">
+            <div class="card-label">{{"Tags : "}}</div>
+            <div class="card-label-value2 tag-value">
+                <span *ngFor="let tag of card?.setOfTagsUIModel; last as isLast"
+                    class="tag">{{tag.tagName}}<span *ngIf="!isLast" class="separater"> | </span></span>
+                <!-- {{"Debit | Webservices | Amazon Web Services (AWS) |….."}} -->
+            </div>
+        </div>
+        <div class="card-row">
+            <button [disabled]="entitlement.isEntitled()" class="card-btn del-btn" (click)="onDelete($event)">DELETE</button>
+            <button [disabled]="entitlement.isEntitled()" class="card-btn edit-btn" (click)="onEdit($event)">EDIT</button>
+            <button class="card-btn view-btn" (click)="onView($event)">VIEW</button>
+            <button class="card-btn download-btn" (click)="fasle">DOWNLOAD</button>
+         <!-- To enable the download button::  <button class="card-btn download-btn" (click)="onDownload($event)">DOWNLOAD</button> -->
+        </div>
+    </div>
+</ng-container>

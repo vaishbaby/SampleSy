@@ -1,0 +1,58 @@
+<div class="toolbar">
+  <div class="topPanel">
+    <span class="title">{{fileName?fileName.split('.').slice(0, -1).join('.'):''}}</span>
+    <span *ngIf="pdf" class="page-num-info">
+        <span>{{currentPageIndex}}</span><span> / {{ pdf.numPages }}</span>
+    </span>
+    
+    <!-- <input
+      class="page-num"
+      placeholder="Page"
+      pattern="-?[0-9]*(\.[0-9]+)?"
+      (change)="onNumChange($event)"
+    > -->
+    <span class="btn-con">
+        <a class="custom-btn rotate-btn" (click)="rotate(90)"><img src="./../../assets/images/icon_Rotate.svg" alt="rotate"></a>
+        <a class="custom-btn download-btn" (click)= "flase"><img src="./../../assets/images/icon_Download.svg" alt="download" disabled="true"></a>
+        <!-- To enable the download button ::   <a class="custom-btn download-btn" (click)="onDownload($event)"><img src="./../../assets/images/icon_Download.svg" alt="download"></a> -->
+        <a class="custom-btn print-btn" (click)="onPrint($event)"><img src="./../../assets/images/icon_Print.svg" alt="print"></a>
+    </span>
+    
+  </div>
+  <div class="zoomPanel">
+      <div class="z-con">
+          <a class="custom-btn" (click)="onPageFit()"><img [src]="iconFitScreen" alt="full screen"></a>
+          <a class="custom-btn" (click)="onZoom(0.1)" ><img src="./../../assets/images/icon_ZoomIn.svg" alt="zoom in"></a>
+          <a class="custom-btn" (click)="onZoom(-0.1)"><img src="./../../assets/images/icon_ZoomOut.svg" alt="zoom out"></a>
+      </div>
+    <div>
+      
+    </div>
+      
+  </div>
+</div>
+<ng-container *ngIf="src">
+    <pdf-viewer [src]="src"
+      [(page)]="page"
+      [rotation]="rotation"
+      [original-size]="originalSize"
+      [fit-to-page]="fitToPage"
+      (after-load-complete)="afterLoadComplete($event)"
+      [zoom]="zoom"
+      [show-all]="showAll"
+      [stick-to-page]="stickToPage"
+      [render-text]="renderText"
+      [external-link-target]="'blank'"
+      [autoresize]="autoresize"
+      (error)="onError($event)"
+      (on-progress)="onProgress($event)"
+      (pageChange) ="onPageChange($event)"
+      (page-rendered)="pageRendered($event)"
+      (scroll)="onScroll($event)"
+      #pdfViewerRef
+    ></pdf-viewer>
+  </ng-container>
+  <!-- <iframe name="title" id="iFrameRef" [src]="src | safe" 
+  width="100%" height="100%" frameborder="0"></iframe> -->
+
+

@@ -1,0 +1,120 @@
+.filter-item{
+    float: left;
+    width: auto;
+}
+.total-proposal-count{
+    font-size: 3.6rem;
+    color: #ffffff;
+    font-weight: 200;
+    font-family: Carnas-ExtraLight !important;
+}
+.total-txt{
+    font-size:1.2rem;
+    color:#a1aed1;
+    font-family: Carnas-Light !important;
+    font-weight: 300;
+}
+.pro-txt{
+    font-size:1.2rem;
+    color:#a1aed1;
+    font-family: Carnas-Medium !important;
+    font-weight: 500;
+}
+.line-bar-container{
+    margin-top: 0.4rem;
+    margin-bottom: 0.4rem;
+}
+
+.pro-count-box{
+    padding: 0.8rem 0;
+}
+.pro-count{
+    font-size:2.6rem;
+    color:#ffffff;
+    font-family: Carnas-ExtraLight;
+    font-weight: 200;
+}
+.pro-name{
+    font-size:1rem;
+    color:#a1aed1;
+    font-family: Carnas-Regular;
+}
+hr {
+    border: 0;
+    border-top: 1px solid rgba(0,0,0,.1);
+    border-width: 0.4rem;
+    border-radius: 0.2rem;
+    width: 2.2rem;
+    margin-top: 0;
+    margin-bottom: -0.2rem;
+}
+.bu-panel {
+    background-color: #3b4357;
+}
+.bu-title{
+    font-family: Carnas-Medium;
+    font-size: 1.7rem;
+    font-weight: 500;
+    color: #a1aed1;
+}
+.ft-label{
+    font-family: 'Carnas-Light';
+    font-size:1rem;
+    font-weight: 300;
+    color: #4a4a4a;
+    display: block;
+}
+.apply-ft{
+  font-family: 'Carnas-Regular';
+  font-size: 1.5rem;
+  color: #515e6b;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 7%;
+}
+
+.search-btn{
+    text-align: center;
+    font-size: 1.4rem;
+    font-family: 'Carnas-Regular';
+    border-radius: 0.3rem;
+    background-color: #4a90e2;
+    vertical-align: middle;
+    margin-top: 1.2rem;
+    width: 100%;
+    color: #ffffff;
+    padding: 0.35rem;
+}
+
+.search-btn:hover{
+    background-color: #4574bd;
+    
+}
+.scroll-container{
+    height: calc(100% - 4.8rem);
+    overflow-y: auto;
+}
+.card-container {
+    min-height: 49rem;
+}
+
+.wid-18{
+    width: 18.5%;
+}
+.wid-15{
+    width: 15%;
+}
+.calender-clear{
+    position: absolute;
+    right: 0.32rem;
+    top: 50%;
+    font-size: 1.6rem;
+    height: 1.6rem;
+    margin-top: -.8rem;
+    cursor: pointer;
+    color: #848484
+}
+.cal-container{
+    position: relative;
+}
